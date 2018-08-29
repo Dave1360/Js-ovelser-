@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        #display{
+            height: 20vw;
+            width: 20vw;
+            background: silver;
+            margin: 7vw;
+            padding: 1vw;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="display"></div>
+
+    <script>
+
+        let spil = ["sten", "saks", "papir"];
+
+        spil.forEach(spillet => {
+            document.querySelector("#display").innerHTML += spillet + ":-)" + "<br>";
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>klikpåknap</title>
+
+    <style>
+    #box,
+        #box2 {
+            height: 10vw;
+            width: 10vw;
+            background-color: wheat;
+            margin: 20px;
+            padding: 20px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <button id="klik">klik</button>
+    <button id="slet">Slet</button>
+    <button id="html">HTML</button>
+    <button id="flyt">flyt</button>
+
+
+    <div id="box"></div>
+    <div id="box2"></div>
+
+
+    <script>
+
+    const myBut1 = document.querySelector("#klik");
+    const myBut2 = document.querySelector("#slet");
+    const myBut3 = document.querySelector("#html");
+    const myBut4 = document.querySelector("#flyt");
+
+    myBut1.addEventListener("click", visKlik);
+
+    function visKlik() {
+        box.textContent = "klik";
+    }
+
+    myBut2.addEventListener("click", fjernKlik);
+
+    function fjernKlik() {
+        box.textContent = "";
+    }
+
+    myBut3.addEventListener("click", visHtmlTekst);
+
+    function visHtmlTekst() {
+        console.log("test");
+
+       box.innerHTML = "<h2>Overskrift her</h2><p>Paragraph her</p>";
+
+    }
+
+    myBut4.addEventListener("click", flytHtml);
+
+    function flytHtml() {
+        console.log("flytHtml");
+        box2.appendChild(box);
+    }
+
+
+    </script>
+
+</body>
+</html>

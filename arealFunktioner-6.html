@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>arealFunktioner-6</title>
+</head>
+
+<body>
+
+    <script>
+        let lenght;
+        let width;
+
+        brugerKontakt();
+
+        function arealBeregning() {
+            areal = lenght * width;
+
+            if (Number(areal)) {
+                alert(areal);
+            } else {
+                alert("Det er ikke korrekt tal!")
+            }
+
+
+
+            let forfra = confirm("Vil du udregne et nyt areal?");
+            if (forfra) {
+                brugerKontakt();
+            }
+
+        }
+
+        function brugerKontakt() {
+            lenght = prompt("Længde?");
+            width = prompt("Bredde?");
+
+            arealBeregning();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

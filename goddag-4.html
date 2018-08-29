@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goddag 4</title>
+</head>
+
+<body>
+
+    <script>
+        let forNavn = prompt("Hvad er dit fornavn?");
+
+        let efterNavn = prompt("Hvad er dit efternavn?");
+
+        if (forNavn == null && efterNavn == null) {
+            alert("Goddag min ven");
+        } else if (forNavn == "" && efterNavn == "") {
+            alert("Goddag min ven");
+        } else if (forNavn && efterNavn) {
+            alert("hej " + forNavn + " " + efterNavn);
+        } else if (forNavn) {
+            alert("hej " + forNavn);
+        } else if (efterNavn) {
+            alert("hej " + efterNavn);
+        }
+    </script>
+
+</body>
+</html>
