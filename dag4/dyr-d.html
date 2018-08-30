@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="persondyret">
+        <strong><span class="dyrenavn"></span></strong>
+        <img id="billede" src="" alt="">
+        <span class="resten"></span>
+    </div>
+
+
+    <script>
+        let dyr = {
+            "navn": "Flodhest",
+            "type": "pattedyr",
+            "levested": "Afrika"
+        };
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+
+
+            let dyret = ": et " + dyr.type + ", som lever i " + dyr.levested;
+            let flodhest = dyr.navn;
+            document.querySelector(".dyrenavn").textContent = flodhest;
+            document.querySelector(".resten").textContent = dyret;
+
+            document.querySelector("#billede").src="flodhest.jpg";
+        }
+    </script>
+
+</body>
+</html>
