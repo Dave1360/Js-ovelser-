@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="tekst"></div>
+
+
+    <script>
+        let dyr =
+            [{"navn": "Flodhest","type": "pattedyr","levested": "Afrika"},{"navn": "skildpadde","type":"Reptil", "levested": "Vand"},
+            {"navn": "Mandrill","type":"Pattedyr","levested":"Tropiske regnskove"}];
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dest = document.querySelector("#tekst");
+
+        function start() {
+
+            dyr.forEach(dyr => {
+               dest.innerHTML += dyr.navn + ": et " + dyr.type + " fra " + dyr.levested + "<br>"
+            });
+        }
+    </script>
+
+</body>
+</html>

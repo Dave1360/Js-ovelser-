@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <div class="dyr"></div>
+    <template class="dyrtemplate">
+        <div class="dyr">
+
+
+
+        </div>
+
+    </template>
+
+
+    <script>
+        let dyr =
+            [{"navn": "Flodhest","type": "pattedyr","levested": "Afrika"},{"navn": "skildpadde","type":"Reptil", "levested": "Vand"},
+            {"navn": "Mandrill","type":"Pattedyr","levested":"Tropiske regnskove"}];
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dest = document.querySelector(".dyr");
+        let temp = document.querySelector(".dyrtemplate");
+        function start() {
+
+            dyr.forEach(animal => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector(".dyr").textContent = animal.navn + " " + animal.type + " " + animal.levested;
+                dest.appendChild(klon);
+
+            });
+        }
+    </script>
+
+</body>
+</html>
